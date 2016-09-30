@@ -97,33 +97,12 @@ function bdh() {
       if (ans.length == 9 && ans.charAt(4) === ' ') {
         ansx = ans.substr(0,4) + ans.substr(5,4);
       }
-      if (ans === user_ans || ansx === user_ans
-          || (isFinite(ans) && parseFloat(ans) == user_ans)) {
+      if (ans === user_ans || ansx === user_ans) {
         $('.question').eq(n).css('background', '#aaf');
       } else {
         $('.question').eq(n).css('background', '#fff');
       }
     });
-  }
-
-
-  function question() {
-    var iflag = get_rand(0,1);
-    var qstr = get_random_bin(iflag);
-    var from_i = get_rand(0,2);
-    var from_base = base_a[from_i];
-    var to_base = base_a[(from_i + get_rand(1,2)) % 3];
-    var from_x;
-    switch(from_base) {
-    case 2: from_x = qstr; break;
-    case 10: from_x = bin2dec(qstr); break;
-    case 16: from_x = bin2hex(qstr); break;
-    }
-    switch(to_base) {
-    case 2: answer = qstr; break;
-    case 10: answer = bin2dec(qstr); break;
-    case 16: answer = bin2hex(qstr); break;
-    }
   }
 
   function create_question(i) {
@@ -173,7 +152,6 @@ function bdh() {
 
   function go() {
     init();
-    question();
   }
 
   go();
