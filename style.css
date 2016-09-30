@@ -1,0 +1,137 @@
+
+html, body, div, table, tr, td, span, h1, h2, input {
+  margin: 0; padding: 0;
+}
+
+html {
+  font-size: 12pt;
+  overflow-y: scroll;
+  background: #444;
+  font-family: "Lucida Sans Unicode","メイリオ",Meiryo,"ＭＳ Ｐゴシック",Helvetica,Arial,Verdana,sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+#BDH_drill {
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  padding: 10px 10px 4px 10px;
+  margin: 0;
+}
+
+#header {
+  margin: 10px 0 0 0;
+  font-size: 18pt;
+  text-align: center;
+  padding: 0 0 20px 0;
+  color: #00a;
+  font-weight: bold;
+}
+
+#footer {
+  margin: 10px 0 0 0;
+  font-size: 9pt;
+  color: #555;
+}
+
+#headtext {
+  text-align: center;
+}
+
+#question_container {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.question {
+  display: inline-block;
+  font-size: 11pt;
+  font-family: monospace;
+  box-sizing: border-box;
+  width: 61ch;
+  padding: 6px 0;
+  margin: 0 26px;
+}
+
+.qid, .qvar, .qfromto, .qinput, .qans {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.qid {
+  text-align: right;
+  width: 4ch;
+}
+
+.qvar {
+  text-align: right;
+  width: 12ch;
+}
+.qfromto {
+  text-align: center;
+  width: 17ch;
+}
+.qinput {
+  text-align: right;
+  width: 13ch;
+  border: 1px solid #aaa;
+  cursor: auto;
+}
+
+.qans {
+  visibility: hidden;
+  width: 14ch;
+  text-align: right;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+
+
+#info_container {
+  text-align: center;
+}
+.seikai { color: #f00; font-weight: bold; }
+.huseikai { color: #00f; font-weight: bold; }
+
+#submit_button {
+  margin: 0 0 0 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px; height: 30px; line-height: 30px;
+  border: 1px solid #aaa;
+  background: #aaf;
+  vertical-align: center;
+}
+
+#next_button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px; height: 40px; line-height: 40px;
+  border: 1px solid #aaa;
+  background: #ddd;
+  visibility: hidden;
+}
+
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none; -o-user-select: none;
+  -webkit-user-select: none; -ms-user-select: none;
+}
+
+.noselect {
+  cursor: default;
+  user-select: none;
+  -moz-user-select: none; -o-user-select: none;
+  -webkit-user-select: none; -ms-user-select: none;
+}
