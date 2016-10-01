@@ -6,7 +6,7 @@ html, body, div, table, tr, td, span, h1, h2, input {
 html {
   font-size: 12pt;
   overflow-y: scroll;
-  background: #444;
+  background: #fff;
   font-family: "Lucida Sans Unicode","メイリオ",Meiryo,"ＭＳ Ｐゴシック",Helvetica,Arial,Verdana,sans-serif;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -134,4 +134,18 @@ html {
   user-select: none;
   -moz-user-select: none; -o-user-select: none;
   -webkit-user-select: none; -ms-user-select: none;
+}
+
+.newpage {
+  page-break-before: always;
+}
+
+@media print {
+  #header { margin-top: 0; }
+  #footer { display: none; }
+  .qans { display: none; }
+  .question { margin: 0 4px; width: 53ch; }
+}
+@page {
+  margin: 0.5in 0;
 }

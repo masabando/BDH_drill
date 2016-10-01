@@ -1,4 +1,6 @@
 
+var qlist = [];
+
 function bdh() {
   var APP_NAME = 'bdh_drill.js';
   var VERSION = "0.1";
@@ -12,7 +14,6 @@ function bdh() {
   var digit_size = 8;// 4*N
   var digit_msize = 4;// 4*M < digit_size
   var qnum = 100;
-  var qlist = [];
 
   // [Autoset Vars] ---------------------------------------------------
   var click_event = 'click';
@@ -78,12 +79,16 @@ function bdh() {
       }
     } else {// 小数
       if (parseInt(s.charAt(0)) == 0) {// 正の小数
-        return (parseInt(s.substr(0, 4), 2)
-                + parseInt(s.substr(5, 4), 2)*Math.pow(0.5, 4)).toString(10);
+        return parseInt(s.substr(0, 4), 2).toString(10)
+          + '.'
+          + ((parseInt(s.substr(5, 4), 2)*Math.pow(0.5, 4))
+             .toString(10).split(".")[1] || "0");
       } else {// 負の小数
         var b = add1(bitflip(s));
-        return (-(parseInt(b.substr(0, 4), 2)
-                  + parseInt(b.substr(5, 4), 2)*Math.pow(0.5, 4))).toString(10);
+        return '-' + parseInt(b.substr(0, 4), 2).toString(10)
+          + '.'
+          + ((parseInt(b.substr(5, 4), 2)*Math.pow(0.5, 4))
+          .toString(10).split(".")[1] || "0");
       }
     }
   }
@@ -157,6 +162,27 @@ function bdh() {
   go();
 }
 
+function show_answers() { $('.qans').css('visibility', 'visible'); }
+
+function hide_answers() { $('.qans').css('visibility', 'hidden'); }
+
+var print_mode_ans = false;
+function print_mode(num) {
+  print_mode_ans = !print_mode_ans;
+  var nstr = ("0"+num).slice(-2);
+  if (print_mode_ans) {
+    $('.qinput').each(function() {
+      $(this).val(qlist[$(this).parent().attr('id').split('_')[1]].qans);
+    });
+    $('#printnum').html(nstr + " 解答");
+    $('title').text(nstr + "_ans");
+  } else {
+    $('.qinput').val("");
+    $('#printnum').html(nstr);
+    $('title').text(nstr);
+  }
+  $('.qans').css('display', 'none');
+}
 
 $(function() {
   bdh();
