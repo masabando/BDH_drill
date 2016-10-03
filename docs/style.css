@@ -149,3 +149,9 @@ html {
 @page {
   margin: 0.5in 0;
 }
+
+@media (max-width: 767px) {
+  .question {
+    font-size: 9pt;
+  }
+}
