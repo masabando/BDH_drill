@@ -155,7 +155,13 @@ html {
 }
 
 @media (max-width: 767px) {
-  .qans { display: none; }
+  html {
+    font-size: 11pt;
+  }
+  #header {
+   font-size: 14pt;
+  }
+ .qans { display: none; }
   .question {
     display: block;
    text-align: left;
