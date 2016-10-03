@@ -108,21 +108,21 @@ function bdh() {
         $('.question').eq(n).css('background', '#fff');
       }
     });
-    if (smart_phone_flag) {
-      document.addEventListener('touchstart', event => {
-        if (event.touches.length > 1) {
-          event.preventDefault();
-        }
-      }, true);
-      var lastTouch = 0;
-      document.addEventListener('touchend', event => {
-        const now = window.performance.now();
-        if (now - lastTouch <= 500) {
-          event.preventDefault();
-        }
-        lastTouch = now;
-      }, true);
-    }
+    // if (smart_phone_flag) {
+    //   document.addEventListener('touchstart', event => {
+    //     if (event.touches.length > 1) {
+    //       event.preventDefault();
+    //     }
+    //   }, true);
+    //   var lastTouch = 0;
+    //   document.addEventListener('touchend', event => {
+    //     const now = window.performance.now();
+    //     if (now - lastTouch <= 500) {
+    //       event.preventDefault();
+    //     }
+    //     lastTouch = now;
+    //   }, true);
+    // }
   }
 
 
