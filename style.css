@@ -53,7 +53,7 @@ html, body {
 .question {
   display: inline-block;
   font-size: 11pt;
-  text-align: left;
+  text-align: right;
   font-family: monospace;
   box-sizing: border-box;
   width: 61ch;
