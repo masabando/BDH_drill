@@ -158,5 +158,6 @@ html {
   .question {
     margin: 0 4px; width: 53ch;
     font-size: 10pt;
+    border: 1px solid #faa;
   }
 }
