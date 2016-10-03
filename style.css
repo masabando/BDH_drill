@@ -21,7 +21,6 @@ html {
   width: 100%;
   padding: 10px 10px 4px 10px;
   margin: 0;
-  border: 1px solid #aaa;
   overflow: hidden;
 }
 
@@ -164,6 +163,5 @@ html {
     /* width: 52ch; */
     width: 100%;
     font-size: 10pt;
-    border: 1px solid #faa;
   }
 }
