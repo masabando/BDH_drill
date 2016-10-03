@@ -64,6 +64,7 @@ html {
 .qid, .qvar, .qfromto, .qinput, .qans {
   display: inline-block;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 .qid {
@@ -81,6 +82,7 @@ html {
 }
 .qinput {
   text-align: right;
+  font-family: monospace;
   width: 13ch;
   border: 1px solid #aaa;
   cursor: auto;
