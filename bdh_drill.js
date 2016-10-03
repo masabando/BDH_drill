@@ -95,7 +95,6 @@ function bdh() {
 
   function add_hook_event() {
     $('.qinput').change(function() {
-alert(1);
       var n = $(this).parent().attr('id').split("_")[1];
       var user_ans = $(this).val();
       var ans = qlist[n].qans;
@@ -103,6 +102,7 @@ alert(1);
       if (ans.length == 9 && ans.charAt(4) === ' ') {
         ansx = ans.substr(0,4) + ans.substr(5,4);
       }
+      alert(ans + " " + ansx + " " + user_ans);
       if (ans === user_ans || ansx === user_ans) {
         $('.question').eq(n).css('background', '#aaf');
       } else {
