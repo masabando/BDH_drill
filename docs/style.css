@@ -22,6 +22,7 @@ html {
   padding: 10px 10px 4px 10px;
   margin: 0;
   border: 1px solid #aaa;
+  overflow: hidden;
 }
 
 #header {
@@ -153,7 +154,9 @@ html {
 }
 
 @media (max-width: 767px) {
+  .qans { display: none; }
   .question {
-    font-size: 9pt;
+    margin: 0 4px; width: 53ch;
+    font-size: 10pt;
   }
 }
