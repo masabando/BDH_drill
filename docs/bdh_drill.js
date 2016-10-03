@@ -157,8 +157,9 @@ function bdh() {
         + '<div class="qfromto">('
         + (q.qfrom == 2 ? '&ensp;' : '') + q.qfrom + '進-->'
         + (q.qto == 2 ? '&ensp;' : '') + q.qto + '進)</div>'
-        + (smart_phone_flag ? '<br>': '')
+        + (smart_phone_flag ? '<div class="right">': '')
         + '<input class="qinput" type="text" name="qinput" value="">'
+        + (smart_phone_flag ? '</div>': '')
         + '<div class="qans">(' + q.qans + ')</div>'
         + '</div>'
     );
