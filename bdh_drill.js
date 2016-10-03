@@ -155,8 +155,9 @@ function bdh() {
         + '<div class="qid">' + (i < 10 ? '&ensp;' : '') + i + ':</div>'
         + '<div class="qvar">' + q.qvar + '</div>'
         + '<div class="qfromto">('
-        + (q.qfrom == 2 ? '&ensp;' : '') + q.qfrom + '進 --> '
+        + (q.qfrom == 2 ? '&ensp;' : '') + q.qfrom + '進-->'
         + (q.qto == 2 ? '&ensp;' : '') + q.qto + '進)</div>'
+        + (smart_phone_flag ? '<br>': '')
         + '<input class="qinput" type="text" name="qinput" value="">'
         + '<div class="qans">(' + q.qans + ')</div>'
         + '</div>'

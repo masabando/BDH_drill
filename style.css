@@ -53,6 +53,7 @@ html, body {
 .question {
   display: inline-block;
   font-size: 11pt;
+  text-align: left;
   font-family: monospace;
   box-sizing: border-box;
   width: 61ch;
@@ -164,7 +165,6 @@ html, body {
  .qans { display: none; }
   .question {
     display: block;
-    text-align: left;
     margin: 0 2px;
     /* width: 52ch; */
     width: 100%;
