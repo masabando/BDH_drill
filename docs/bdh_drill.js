@@ -96,6 +96,7 @@ function bdh() {
   function add_hook_event() {
     $('.qinput').change(function() {
       var n = $(this).parent().attr('id').split("_")[1];
+      alert(n);
       var user_ans = $(this).val();
       var ans = qlist[n].qans;
       var ansx = qlist[n].qans;
