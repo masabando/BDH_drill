@@ -95,15 +95,18 @@ function bdh() {
 
   function add_hook_event() {
     $('.qinput').change(function() {
-      var n = $(this).parent().attr('id').split("_")[1];
-      alert(n);
+      var n;
+      if (smart_phone_flag) {
+        n = $(this).parent().parent().attr('id').split("_")[1];
+      } else {
+        n = $(this).parent().attr('id').split("_")[1];
+      }
       var user_ans = $(this).val();
       var ans = qlist[n].qans;
       var ansx = qlist[n].qans;
       if (ans.length == 9 && ans.charAt(4) === ' ') {
         ansx = ans.substr(0,4) + ans.substr(5,4);
       }
-      alert(ans + " " + ansx + " " + user_ans);
       if (ans === user_ans || ansx === user_ans) {
         $('.question').eq(n).css('background', '#aaf');
       } else {
